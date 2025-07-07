@@ -93,7 +93,8 @@ export default function InterviewAssistant() {
 
   const getAnswer = async (questionText) => {
     try {
-      const response = await fetch("http://localhost:5000/api/answer", {
+      
+      const response = await fetch("https://intervuiassistant-backend.onrender.com/api/answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: questionText }),
